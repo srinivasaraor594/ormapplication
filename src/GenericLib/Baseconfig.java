@@ -45,9 +45,9 @@ public class Baseconfig {
 	// }
 	//
 	//
-	 @AfterClass
-	 public void teardown() throws InterruptedException{
-	 commmethods.quite();
-	 }
+//	 @AfterClass
+//	 public void teardown() throws InterruptedException{
+//	 commmethods.quite();
+//	 }
 
 }
