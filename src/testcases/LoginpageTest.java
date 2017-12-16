@@ -1,36 +1,29 @@
 package testcases;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import GenericLib.Baseconfig;
+import GenericLib.Globalmethods;
+import objectrep.HomePageObjects;
 import objectrep.loginobjects;
 
 @Listeners(GenericLib.SampleLisner.class)
-public class GetMemberUserCredentialsAndChangePassword extends Baseconfig {
+public class LoginpageTest extends Baseconfig {
 	//loginobjects hp=PageFactory.initElements(Globalmethods.driver,loginobjects.class);
-	protected WebDriver driver;
 	
-	
-	public GetMemberUserCredentialsAndChangePassword(WebDriver driver) {
-		this.driver = driver;
-	}
-	@BeforeClass
-	public WebDriver getDriver() {
-		return driver;
-	}
-
+	//loginobjects loginobj=new loginobjects();
 	 @Test()
-	 public void gettingcredentials(String UserId) throws Exception 
-	 {  //PageFactory.initElements(Globalmethods.driver,loginobjects.class);
-		//WebElement user=loginobjects.username_Edit;
-		 
-		  loginobjects.ValidLogin();
-		 
-		 //loginobjects.username_Edit.sendKeys("DEMO_12");
-		 
+	 public void gettingcredentials() throws Exception 
+	 { 
+
+		 loginobjects.ValidLogin();
+		// loginobjects.getUsername_Edit().sendKeys("DEMO_12");
+		// commmethods.waitforpagetoload();
+		
+		
+		 //commmethods.ListOfElements(HomePageObjects.getMySocietyList(), "application");
 	 }
 
 //	@Test(priority = 1)

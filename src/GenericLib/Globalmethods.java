@@ -16,12 +16,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 
-import objectrep.loginobjects;
+public class Globalmethods {
 
-public class Globalmethods{
+	public static WebDriver driver;
+	static ITestResult Result;
 
- public static WebDriver driver;
- static ITestResult Result;
 	public void Init() {
 		FirefoxProfile profile = new FirefoxProfile();
 		profile.setPreference("media.navigator.permission.disabled", true);
@@ -48,57 +47,58 @@ public class Globalmethods{
 		alert.accept();
 	}
 
-	public void setdata(WebElement wb, String data){
+	public void setdata(WebElement wb, String data) {
 
-	wb.clear();
-	
-	wb.sendKeys(data);
+		wb.clear();
+
+		wb.sendKeys(data);
 	}
-	
-	 public boolean IsDiplayed(WebElement element){
-		try{element.isDisplayed();}
-		catch(NoSuchElementException e){
+
+	public boolean IsDiplayed(WebElement element) {
+		try {
+			element.isDisplayed();
+		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		return false;
 	}
-	
-	public void click(WebElement element){
-		if(IsDiplayed(element)){
+
+	public void click(WebElement element) {
+		if (IsDiplayed(element)) {
 			element.click();
 		}
 	}
 
-	
-	/*public  void sendkeysByid(WebElement webElement, String data) {
-		setdata(webElement,data);
-	}*/
+	/*
+	 * public void sendkeysByid(WebElement webElement, String data) {
+	 * setdata(webElement,data); }
+	 */
 
-	public void SendKeysById(String id,String value){
+	public void SendKeysById(String id, String value) {
 		driver.findElement(By.id(id)).sendKeys(value);
 	}
-	
+
 	public void clickbyid(String Element) {
 		driver.findElement(By.id(Element)).click();
 	}
 
-	public void clickbyxpath(String Element) {
-		driver.findElement(By.xpath(Element)).click();
+	public void sendkeys(WebElement wb,String data ){
+		wb.sendKeys(data);
 	}
+	
+	
+	public void clickbyxpath(WebElement wb) {
+		wb.click();
+	}
+//	public void Thread(WebElement wb){
+//		wb.wait(TimeUnit.NANOSECONDS, 10);
+//	}
 
 	public void sendkeysByXpath(String Element, String data) {
 		driver.findElement(By.xpath(Element)).sendKeys(data);
 	}
 
-	public void waitforpagetoload() {
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
-
-	}
-
-	public void waitforelementtoload(WebElement wb) {
-		WebDriverWait wait = new WebDriverWait(Globalmethods.driver, 10);
-		wait.until(ExpectedConditions.visibilityOf((wb)));
-	}
+	
 
 	public void navigatemethod(String Url) throws InterruptedException {
 		// driver.navigate().to();
@@ -106,35 +106,34 @@ public class Globalmethods{
 		Thread.sleep(3000);
 	}
 
-//	public void listofelementsByxpath(WebElement elements, WebElement xpathofallelements) {
-//		try {
-//			if (IsDiplayed(xpathofallelements)) {
-//
-//				List<WebElement> lstelement = driver.findElements(By.xpath(xpathofallelements));
-//				for (WebElement element : lstelement) {
-//					if (element.equals(xpathofperticularelement)) {
-//						element.click();
-//					}
-//				}
-//			}
-//
-//		} catch (NoSuchElementException e) {
-//			e.printStackTrace();
-//
-//		}
-//	}
-	
-	
-	
-	
-//
-//	boolean isDisplayebyid(String ID) {
-//		return driver.findElement(By.id(ID)).isDisplayed();
-//	}
-//
-//	public boolean isDisplayebyxpath(String Xpath) {
-//		return driver.findElement(By.id(Xpath)).isDisplayed();
-//	}
+	// public void listofelementsByxpath(WebElement elements, WebElement
+	// xpathofallelements) {
+	// try {
+	// if (IsDiplayed(xpathofallelements)) {
+	//
+	// List<WebElement> lstelement =
+	// driver.findElements(By.xpath(xpathofallelements));
+	// for (WebElement element : lstelement) {
+	// if (element.equals(xpathofperticularelement)) {
+	// element.click();
+	// }
+	// }
+	// }
+	//
+	// } catch (NoSuchElementException e) {
+	// e.printStackTrace();
+	//
+	// }
+	// }
+
+	//
+	// boolean isDisplayebyid(String ID) {
+	// return driver.findElement(By.id(ID)).isDisplayed();
+	// }
+	//
+	// public boolean isDisplayebyxpath(String Xpath) {
+	// return driver.findElement(By.id(Xpath)).isDisplayed();
+	// }
 
 	public void gettextbyid(String id) {
 		driver.findElement(By.id(id));
@@ -144,24 +143,20 @@ public class Globalmethods{
 		driver.findElement(By.xpath(xpath)).getText();
 	}
 
-	
-	public void ListOfElements(List<WebElement> lst, String PerticularElement){
-		//List<WebElement> ListElements=driver.findElements(By.xpath(wb));
-		for(WebElement element: lst){
-			if(element.equals(PerticularElement)){
+	public void ListOfElements(List<WebElement> lst, String PerticularElement) {
+		// List<WebElement> ListElements=driver.findElements(By.xpath(wb));
+		for (WebElement element : lst) {
+			if (element.equals(PerticularElement)) {
 				element.click();
 			}
 		}
-		
-	}
-	
-//	public void listofelemnts(List<WebElement>elements, String  data){
-//		for(WebElement element: elements){
-//		if(element.getAttribute("title").equalsIgnoreCase(data));
-//		element.click();
-//		break;
-//	}
-}
-	
-	
 
+	}
+
+	// public void listofelemnts(List<WebElement>elements, String data){
+	// for(WebElement element: elements){
+	// if(element.getAttribute("title").equalsIgnoreCase(data));
+	// element.click();
+	// break;
+	// }
+}

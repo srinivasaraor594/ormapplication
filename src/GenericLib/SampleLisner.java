@@ -11,16 +11,16 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 
-
-
-public class SampleLisner implements ITestListener{private WebDriver driver;
-protected Globalmethods Globalmethods=new Globalmethods();
+public class SampleLisner implements ITestListener{
+	private WebDriver driver;
+//protected Globalmethods Globalmethods=new Globalmethods();
 
 //@BeforeClass
 //public void setUp() {
 //	driver=getDriver();
 //}
 
+	
 	@Override
 	
 	public void onFinish(ITestContext arg0) {

@@ -1,20 +1,19 @@
 package objectrep;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import GenericLib.Baseconfig;
+import GenericLib.Constants;
 
-import GenericLib.Excellconfig;
-import GenericLib.Globalmethods;
 
-public class loginobjects {
+public class loginobjects extends Baseconfig{
 
-	private WebDriver driver;
-	
-	public loginobjects() {
-		this.driver=driver;
-	}
-	
+//	private WebDriver driver;
+//	
+//	public loginobjects(WebDriver driver) {
+//		this.driver=driver;
+//	}
+//	
 	
 	
 	/*public loginobjects(WebDriver driver) {
@@ -25,35 +24,32 @@ public class loginobjects {
 
 	@FindBy(id = "UserName")
 	private static WebElement username_Edit;
-
 	
-
-//	public static WebElement getUsername_Edit() {
-//		return username_Edit;
-//	}
-
-//	public static void username(String user) {
-//		username_Edit.sendKeys(user);
-//	}
-
-	// Globalmethods.driver.findElement(By.id(userid)).sendKeys(UserName);
-//Excellconfig excell=new Excellconfig();
-	public void clickonSign() {
-		System.out.println("2");
-	}
+	@FindBy(id = "Password")
+	private static WebElement Password_Edit;
+	
+	@FindBy(id="TnC")
+	private static WebElement Chech_Bttn;
+	
+	@FindBy(id="logsave")
+	private static WebElement Login_Bttn;
 	
 	@FindBy(xpath="//span[@class='zF']")
 	private WebElement MailSearch;
 
-	 public WebElement getMailSearch() {
-		return MailSearch;
-	}
 	 
-	 public static void ValidLogin() throws Exception{
-		 username_Edit.sendKeys(Excellconfig.gettingecelldata());
-		 
+	 
+	 public void ValidLogin(){
+		 //username_Edit.sendKeys(Constants.Admin);
+		 //Password_Edit.sendKeys(Constants.password);
+		 commmethods.sendkeys(username_Edit, Constants.Admin);
+		 commmethods.sendkeys(Password_Edit, Constants.password);
+		// Baseconfig.webdriverwait.waitforpagetoload();
+		 commmethods.click(Chech_Bttn);
+		 commmethods.click(Login_Bttn);
 	 }
-	 
+
+	
 //	 @DataProvider(name = "OTHFacilitySimulationWithAdminLogin")
 //		public static Object[][] FacilityWithMoreThanAllowedTime() throws IOException, BiffException {
 //			File fs = new File("");

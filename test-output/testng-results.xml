@@ -1,55 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13086" started-at="2017-12-15T08:46:58Z" finished-at="2017-12-15T08:47:11Z">
+  <suite name="Default suite" duration-ms="12987" started-at="2017-12-16T12:32:23Z" finished-at="2017-12-16T12:32:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13086" started-at="2017-12-15T08:46:58Z" finished-at="2017-12-15T08:47:11Z">
-      <class name="testcases.GetMemberUserCredentialsAndChangePassword">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.GetMemberUserCredentialsAndChangePassword@523884b2]" name="initialize" is-config="true" duration-ms="13006" started-at="2017-12-15T14:16:58Z" finished-at="2017-12-15T14:17:11Z">
+    <test name="Default test" duration-ms="12987" started-at="2017-12-16T12:32:23Z" finished-at="2017-12-16T12:32:36Z">
+      <class name="testcases.LoginpageTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.LoginpageTest@523884b2]" name="initialize" is-config="true" duration-ms="12606" started-at="2017-12-16T18:02:23Z" finished-at="2017-12-16T18:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="SKIP" signature="gettingcredentials(java.lang.String)[pri:0, instance:testcases.GetMemberUserCredentialsAndChangePassword@523884b2]" name="gettingcredentials" duration-ms="0" started-at="2017-12-15T14:17:11Z" finished-at="2017-12-15T14:17:11Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Method gettingcredentials requires 1 parameters but 0 were supplied in the @Test annotation.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method gettingcredentials requires 1 parameters but 0 were supplied in the @Test annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:191)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:127)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:376)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1270)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:985)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1075)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="gettingcredentials()[pri:0, instance:testcases.LoginpageTest@523884b2]" name="gettingcredentials" duration-ms="362" started-at="2017-12-16T18:02:36Z" finished-at="2017-12-16T18:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gettingcredentials -->
-      </class> <!-- testcases.GetMemberUserCredentialsAndChangePassword -->
+      </class> <!-- testcases.LoginpageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
