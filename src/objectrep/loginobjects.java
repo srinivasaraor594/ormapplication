@@ -1,24 +1,21 @@
 package objectrep;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.annotations.DataProvider;
 
-import com.microsoft.schemas.office.excel.CTClientData.Factory;
-
-import jxl.read.biff.BiffException;
-
-
+import GenericLib.Excellconfig;
+import GenericLib.Globalmethods;
 
 public class loginobjects {
 
+	private WebDriver driver;
+	
+	public loginobjects() {
+		this.driver=driver;
+	}
+	
+	
 	
 	/*public loginobjects(WebDriver driver) {
 
@@ -29,16 +26,18 @@ public class loginobjects {
 	@FindBy(id = "UserName")
 	private static WebElement username_Edit;
 
-	public static WebElement getUsername_Edit() {
-		return username_Edit;
-	}
+	
 
-	public static void username(String user) {
-		username_Edit.sendKeys(user);
-	}
+//	public static WebElement getUsername_Edit() {
+//		return username_Edit;
+//	}
+
+//	public static void username(String user) {
+//		username_Edit.sendKeys(user);
+//	}
 
 	// Globalmethods.driver.findElement(By.id(userid)).sendKeys(UserName);
-
+//Excellconfig excell=new Excellconfig();
 	public void clickonSign() {
 		System.out.println("2");
 	}
@@ -50,6 +49,10 @@ public class loginobjects {
 		return MailSearch;
 	}
 	 
+	 public static void ValidLogin() throws Exception{
+		 username_Edit.sendKeys(Excellconfig.gettingecelldata());
+		 
+	 }
 	 
 //	 @DataProvider(name = "OTHFacilitySimulationWithAdminLogin")
 //		public static Object[][] FacilityWithMoreThanAllowedTime() throws IOException, BiffException {

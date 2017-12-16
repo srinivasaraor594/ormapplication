@@ -1,7 +1,7 @@
 package testcases;
 
-
-
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -11,20 +11,27 @@ import objectrep.loginobjects;
 @Listeners(GenericLib.SampleLisner.class)
 public class GetMemberUserCredentialsAndChangePassword extends Baseconfig {
 	//loginobjects hp=PageFactory.initElements(Globalmethods.driver,loginobjects.class);
+	protected WebDriver driver;
 	
 	
-	 @Test(dataProvider="gettinIDfromgmail",dataProviderClass=loginobjects.class)
-	 public void gettingcredentials(String UserId) 
-	 {//PageFactory.initElements(Globalmethods.driver,loginobjects.class);
-		// WebElement user=loginobjects.username_Edit;
-		 loginobjects.username(UserId);
+	public GetMemberUserCredentialsAndChangePassword(WebDriver driver) {
+		this.driver = driver;
+	}
+	@BeforeClass
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	 @Test()
+	 public void gettingcredentials(String UserId) throws Exception 
+	 {  //PageFactory.initElements(Globalmethods.driver,loginobjects.class);
+		//WebElement user=loginobjects.username_Edit;
+		 
+		  loginobjects.ValidLogin();
 		 
 		 //loginobjects.username_Edit.sendKeys("DEMO_12");
 		 
-	
 	 }
-
-	
 
 //	@Test(priority = 1)
 //	public void gettingforgatidandpassword() throws InterruptedException {
