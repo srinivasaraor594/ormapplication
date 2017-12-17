@@ -57,17 +57,18 @@ public class Globalmethods {
 	public boolean IsDiplayed(WebElement element) {
 		try {
 			element.isDisplayed();
+			element.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		return false;
 	}
 
-	public void click(WebElement element) {
-		if (IsDiplayed(element)) {
-			element.click();
-		}
-	}
+//	public void click(WebElement element) {
+//		if (IsDiplayed(element)) {
+//			element.click();
+//		}
+//	}
 
 	/*
 	 * public void sendkeysByid(WebElement webElement, String data) {

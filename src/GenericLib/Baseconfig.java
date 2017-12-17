@@ -17,7 +17,7 @@ public class Baseconfig {
 	protected static Excellconfig Excell=new Excellconfig();
 	protected static loginobjects loginobjects=new loginobjects();
 	//protected loginobjects objects=new loginobjects();
-	//protected static HomePageObjects homeobjects=new HomePageObjects();
+	protected static HomePageObjects homeobjects=new HomePageObjects();
 //	
 //	public WebDriver getDriver() {
 //		return driver;

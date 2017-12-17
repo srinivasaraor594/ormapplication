@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12987" started-at="2017-12-16T12:32:23Z" finished-at="2017-12-16T12:32:36Z">
+  <suite name="Default suite" duration-ms="16379" started-at="2017-12-17T04:50:15Z" finished-at="2017-12-17T04:50:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12987" started-at="2017-12-16T12:32:23Z" finished-at="2017-12-16T12:32:36Z">
+    <test name="Default test" duration-ms="16379" started-at="2017-12-17T04:50:15Z" finished-at="2017-12-17T04:50:31Z">
       <class name="testcases.LoginpageTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.LoginpageTest@523884b2]" name="initialize" is-config="true" duration-ms="12606" started-at="2017-12-16T18:02:23Z" finished-at="2017-12-16T18:02:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.LoginpageTest@523884b2]" name="initialize" is-config="true" duration-ms="12502" started-at="2017-12-17T10:20:15Z" finished-at="2017-12-17T10:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="gettingcredentials()[pri:0, instance:testcases.LoginpageTest@523884b2]" name="gettingcredentials" duration-ms="362" started-at="2017-12-16T18:02:36Z" finished-at="2017-12-16T18:02:36Z">
+        <test-method status="PASS" signature="gettingcredentials()[pri:0, instance:testcases.LoginpageTest@523884b2]" name="gettingcredentials" duration-ms="3849" started-at="2017-12-17T10:20:27Z" finished-at="2017-12-17T10:20:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gettingcredentials -->
