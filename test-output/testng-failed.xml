@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.HomePageTestCase">
+      <class name="testcases.Happyflow">
         <methods>
-          <include name="Application"/>
+          <include name="Regression"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- testcases.HomePageTestCase -->
+      </class> <!-- testcases.Happyflow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

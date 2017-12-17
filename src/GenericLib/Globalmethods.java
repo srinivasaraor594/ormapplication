@@ -46,66 +46,82 @@ public class Globalmethods {
 		System.out.println("Popup came as : " + PopupText);
 		alert.accept();
 	}
+//
+//	public void setdata(WebElement wb, String data) {
+//
+//		wb.clear();
+//
+//		wb.sendKeys(data);
+//	}
 
-	public void setdata(WebElement wb, String data) {
+	public void setdataByCss(String wb, String data) {
 
-		wb.clear();
-
-		wb.sendKeys(data);
+	WebElement elemnt=driver.findElement(By.cssSelector(wb));
+	elemnt.clear();
+	elemnt.click();
+	elemnt.sendKeys(data);
 	}
+	
+	// public boolean IsDiplayed(WebElement element) {
+	// try {
+	// element.isDisplayed();
+	//
+	// } catch (NoSuchElementException e) {
+	// e.printStackTrace();
+	// }
+	// return false;
+	// }
 
-//	public boolean IsDiplayed(WebElement element) {
-//		try {
-//			element.isDisplayed();
-//		
-//		} catch (NoSuchElementException e) {
-//			e.printStackTrace();
-//		}
-//		return false;
-//	}
-
-//	public void click(WebElement element) {
-//		if (IsDiplayed(element)) {
-//			element.click();
-//		}
-//	}
+	// public void click(WebElement element) {
+	// if (IsDiplayed(element)) {
+	// element.click();
+	// }
+	// }
 
 	/*
 	 * public void sendkeysByid(WebElement webElement, String data) {
 	 * setdata(webElement,data); }
 	 */
-//
-//	public void SendKeysById(String id, String value) {
-//		driver.findElement(By.id(id)).sendKeys(value);
-//	}
+	//
+	// public void SendKeysById(String id, String value) {
+	// driver.findElement(By.id(id)).sendKeys(value);
+	// }
 
-	public void click(WebElement Element) {
-		Element.click();
+	public void click(WebElement chech_Bttn) {
+		chech_Bttn.click();
 	}
 
-	public void sendkeys(WebElement wb,String data ){
+	public void sendkeys(WebElement wb, String data) {
 		wb.sendKeys(data);
 	}
-	
-	
-//	public void clickbyxpath(WebElement wb) {
-//		
-//			wb.click();
-//		}
-	
-//	public void Thread(WebElement wb){
-//		wb.wait(TimeUnit.NANOSECONDS, 10);
-//	}
 
-//	public void sendkeysByXpath(String Element, String data) {
-//		driver.findElement(By.xpath(Element)).sendKeys(data);
-//	}
-//
-//	
+	public void sendkeysByCss(String wb, String data) {
+		driver.findElement(By.cssSelector(wb)).sendKeys(data);
+	}
+
+	public void clickbyxpath(String data) {
+
+		driver.findElement(By.xpath(data)).click();
+	}
+
+	public void clickbyCSS(String data) {
+
+		driver.findElement(By.cssSelector(data)).click();
+	}
+
+	// public void Thread(WebElement wb){
+	// wb.wait(TimeUnit.NANOSECONDS, 10);
+	// }
+
+	// public void sendkeysByXpath(String Element, String data) {
+	// driver.findElement(By.xpath(Element)).sendKeys(data);
+	// }
+	//
+	//
 
 	public void sleep() throws InterruptedException {
 		// driver.navigate().to();
-//		driver.navigate().to(Url);
+		// driver.navigate().to(Url);
 		Thread.sleep(1000);
 	}
 
@@ -146,10 +162,11 @@ public class Globalmethods {
 		driver.findElement(By.xpath(xpath)).getText();
 	}
 
-	public void ListOfElements(List<WebElement> lst, String PerticularElement) {
-		// List<WebElement> ListElements=driver.findElements(By.xpath(wb));
-		for (WebElement element : lst) {
-			if (element.equals(PerticularElement)) {
+	public void ListOfElements(String wb, String PerticularElement) {
+		List<WebElement> ListElements=driver.findElements(By.xpath(wb));
+		for (WebElement element : ListElements) {
+			String Element=driver.findElement(By.xpath(PerticularElement)).getText();
+			if (element.equals(Element)) {
 				element.click();
 			}
 		}

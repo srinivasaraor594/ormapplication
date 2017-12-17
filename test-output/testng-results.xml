@@ -1,54 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19504" started-at="2017-12-17T08:29:11Z" finished-at="2017-12-17T08:29:31Z">
+  <suite name="Default suite" duration-ms="24272" started-at="2017-12-17T12:26:19Z" finished-at="2017-12-17T12:26:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19504" started-at="2017-12-17T08:29:11Z" finished-at="2017-12-17T08:29:31Z">
-      <class name="testcases.HomePageTestCase">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.HomePageTestCase@59fa1d9b]" name="initialize" is-config="true" duration-ms="12418" started-at="2017-12-17T13:59:11Z" finished-at="2017-12-17T13:59:24Z">
+    <test name="Default test" duration-ms="24272" started-at="2017-12-17T12:26:19Z" finished-at="2017-12-17T12:26:43Z">
+      <class name="testcases.Happyflow">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.Happyflow@59fa1d9b]" name="initialize" is-config="true" duration-ms="13564" started-at="2017-12-17T17:56:19Z" finished-at="2017-12-17T17:56:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="Application()[pri:0, instance:testcases.HomePageTestCase@59fa1d9b]" name="Application" duration-ms="7060" started-at="2017-12-17T13:59:24Z" finished-at="2017-12-17T13:59:31Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at GenericLib.Globalmethods.click(Globalmethods.java:83)
-	at objectrep.HomePageObjects.clickOnApplication(HomePageObjects.java:39)
-	at testcases.HomePageTestCase.Application(HomePageTestCase.java:28)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="Regression()[pri:0, instance:testcases.Happyflow@59fa1d9b]" name="Regression" duration-ms="10690" started-at="2017-12-17T17:56:33Z" finished-at="2017-12-17T17:56:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Application -->
-      </class> <!-- testcases.HomePageTestCase -->
+        </test-method> <!-- Regression -->
+      </class> <!-- testcases.Happyflow -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

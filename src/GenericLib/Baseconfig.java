@@ -5,7 +5,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 
 import objectrep.HomePageObjects;
+import objectrep.InvoiceObjects;
 import objectrep.loginobjects;
+import testcases.Happyflow;
 
 public class Baseconfig {
 //	private WebDriver driver;
@@ -16,8 +18,9 @@ public class Baseconfig {
 	protected static SampleLisner scrreenshoot=new SampleLisner();
 	protected static Excellconfig Excell=new Excellconfig();
 	protected static loginobjects loginobjects=new loginobjects();
-	//protected loginobjects objects=new loginobjects();
+	protected static InvoiceObjects invoiceObjects=new InvoiceObjects();
 	protected static HomePageObjects homeobjects=new HomePageObjects();
+	
 //	
 //	public WebDriver getDriver() {
 //		return driver;
@@ -29,7 +32,8 @@ public class Baseconfig {
 		commmethods.Init();
 		PageFactory.initElements(Globalmethods.driver,loginobjects.class);
 		PageFactory.initElements(Globalmethods.driver,HomePageObjects.class);
-
+		PageFactory.initElements(Globalmethods.driver,InvoiceObjects.class);
+		PageFactory.initElements(Globalmethods.driver,Happyflow.class);
 		
 		Thread.sleep(2000);
 

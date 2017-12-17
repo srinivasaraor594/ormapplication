@@ -47,6 +47,7 @@ public class loginobjects extends Baseconfig{
 		// Baseconfig.webdriverwait.waitforpagetoload();
 		 commmethods.click(Chech_Bttn);
 		 commmethods.click(Login_Bttn);
+		
 	 }
 
 	

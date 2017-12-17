@@ -21,11 +21,12 @@ public class HomePageTestCase extends Baseconfig {
 //	}
 loginobjects loginobjects=new loginobjects();
 	
-	@Test()
+	@Test
 	public void Application() throws InterruptedException {
 		//commmethods.navigatemethod(Constants.url);
 		loginobjects.ValidLogin();
 		homeobjects.clickOnApplication();
+		homeobjects.ClickonSocietyinvoicing();
 
 	}
 
