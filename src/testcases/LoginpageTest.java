@@ -19,8 +19,7 @@ public class LoginpageTest extends Baseconfig {
 	 { 
 
 		 loginobjects.ValidLogin();
-		// loginobjects.getUsername_Edit().sendKeys("DEMO_12");
-		// commmethods.waitforpagetoload();
+		
 		
 		
 		 //commmethods.ListOfElements(HomePageObjects.getMySocietyList(), "application");

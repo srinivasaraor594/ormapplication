@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import GenericLib.Baseconfig;
 import GenericLib.Constants;
 import objectrep.HomePageObjects;
+import objectrep.loginobjects;
 
 public class HomePageTestCase extends Baseconfig {
 //protected WebDriver driver;
@@ -18,15 +19,13 @@ public class HomePageTestCase extends Baseconfig {
 //	public WebDriver getDriver() {
 //		return driver;
 //	}
-//	
+loginobjects loginobjects=new loginobjects();
 	
 	@Test()
 	public void Application() throws InterruptedException {
 		//commmethods.navigatemethod(Constants.url);
-		commmethods.ListOfElements(HomePageObjects.getTopModules(), "Application");
-		commmethods.ListOfElements(HomePageObjects.getMySocietyList(), "My Facilities");
-		
-		
+		loginobjects.ValidLogin();
+		homeobjects.clickOnApplication();
 
 	}
 

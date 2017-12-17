@@ -54,15 +54,15 @@ public class Globalmethods {
 		wb.sendKeys(data);
 	}
 
-	public boolean IsDiplayed(WebElement element) {
-		try {
-			element.isDisplayed();
-			element.click();
-		} catch (NoSuchElementException e) {
-			e.printStackTrace();
-		}
-		return false;
-	}
+//	public boolean IsDiplayed(WebElement element) {
+//		try {
+//			element.isDisplayed();
+//		
+//		} catch (NoSuchElementException e) {
+//			e.printStackTrace();
+//		}
+//		return false;
+//	}
 
 //	public void click(WebElement element) {
 //		if (IsDiplayed(element)) {
@@ -74,13 +74,13 @@ public class Globalmethods {
 	 * public void sendkeysByid(WebElement webElement, String data) {
 	 * setdata(webElement,data); }
 	 */
+//
+//	public void SendKeysById(String id, String value) {
+//		driver.findElement(By.id(id)).sendKeys(value);
+//	}
 
-	public void SendKeysById(String id, String value) {
-		driver.findElement(By.id(id)).sendKeys(value);
-	}
-
-	public void clickbyid(String Element) {
-		driver.findElement(By.id(Element)).click();
+	public void click(WebElement Element) {
+		Element.click();
 	}
 
 	public void sendkeys(WebElement wb,String data ){
@@ -88,23 +88,25 @@ public class Globalmethods {
 	}
 	
 	
-	public void clickbyxpath(WebElement wb) {
-		wb.click();
-	}
+//	public void clickbyxpath(WebElement wb) {
+//		
+//			wb.click();
+//		}
+	
 //	public void Thread(WebElement wb){
 //		wb.wait(TimeUnit.NANOSECONDS, 10);
 //	}
 
-	public void sendkeysByXpath(String Element, String data) {
-		driver.findElement(By.xpath(Element)).sendKeys(data);
-	}
+//	public void sendkeysByXpath(String Element, String data) {
+//		driver.findElement(By.xpath(Element)).sendKeys(data);
+//	}
+//
+//	
 
-	
-
-	public void navigatemethod(String Url) throws InterruptedException {
+	public void sleep() throws InterruptedException {
 		// driver.navigate().to();
-		driver.navigate().to(Url);
-		Thread.sleep(3000);
+//		driver.navigate().to(Url);
+		Thread.sleep(1000);
 	}
 
 	// public void listofelementsByxpath(WebElement elements, WebElement
@@ -136,8 +138,8 @@ public class Globalmethods {
 	// return driver.findElement(By.id(Xpath)).isDisplayed();
 	// }
 
-	public void gettextbyid(String id) {
-		driver.findElement(By.id(id));
+	public void gettext(WebElement wb) {
+		wb.getText();
 	}
 
 	public void gettextbyxpath(String xpath) {

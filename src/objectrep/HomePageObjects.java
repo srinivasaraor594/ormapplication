@@ -1,12 +1,11 @@
 package objectrep;
 
-import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import GenericLib.Baseconfig;
 
 
-public class HomePageObjects {
+public class HomePageObjects extends Baseconfig{
 //	private WebDriver driver;
 //	
 //	public HomePageObjects(WebDriver driver){
@@ -26,17 +25,20 @@ public class HomePageObjects {
 	
 	@FindBy(className="category-box border-1 wow fadeInUpQuick animated")
 	private WebElement MySocietyList;
-
-	public static List<WebElement> getTopModules() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	//String s="//a[@class='btn btn-warning main-menu']";
+	
+	
+	
+	@FindBy(className="category-box border-1 wow fadeInUpQuick animated")
+	private WebElement applicationbttn ;
+	
+	
+	public void clickOnApplication() throws InterruptedException {
+		commmethods.sleep();
+		commmethods.click(applicationbttn);
+	
 	}
-
-	public static List<WebElement> getMySocietyList() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 
 	
 }

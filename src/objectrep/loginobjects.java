@@ -45,8 +45,8 @@ public class loginobjects extends Baseconfig{
 		 commmethods.sendkeys(username_Edit, Constants.Admin);
 		 commmethods.sendkeys(Password_Edit, Constants.password);
 		// Baseconfig.webdriverwait.waitforpagetoload();
-		 commmethods.IsDiplayed(Chech_Bttn);
-		 commmethods.IsDiplayed(Login_Bttn);
+		 commmethods.click(Chech_Bttn);
+		 commmethods.click(Login_Bttn);
 	 }
 
 	
