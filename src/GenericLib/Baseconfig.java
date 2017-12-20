@@ -12,7 +12,7 @@ import testcases.Happyflow;
 public class Baseconfig {
 //	private WebDriver driver;
 	//protected static loginobjects logobjects=PageFactory.initElements(Globalmethods.driver,loginobjects.class);
-	//protected static loginobjects logobjects = new loginobjects();
+//	protected static WebElements webElements = new WebElements();
 	protected static Globalmethods commmethods = new Globalmethods();
 	protected static Webdriverwaitstatemts webdriverwait = new Webdriverwaitstatemts();
 	protected static SampleLisner scrreenshoot=new SampleLisner();

@@ -11,6 +11,6 @@ public interface Constants {
 	
 	String gmailurl="https://accounts.google.com";
 	
-	String password="DEMO_12";
-	String Admin="DEMO_12";
+	String password="DEMO_10";
+	String Admin="DEMO_10";
 }

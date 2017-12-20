@@ -29,13 +29,19 @@ public class HomePageObjects extends Baseconfig {
 	@FindBy(className = "category-box border-1 wow fadeInUpQuick animated")
 	private WebElement applicationbttn;
 
+	// @FindBy(xpath = "//a[@class='btn btn-warning main-menu']")
+	// private WebElement application;
+
+	// @FindBy(xpath = "//a[@class='btn btn-warning main-menu']")
+	// private WebElement SocietyInvoice;
+
 	public void clickOnApplication() throws InterruptedException {
 		commmethods.sleep();
-		commmethods.clickbyxpath(application);
+		commmethods.clickbyxpat(application);
 	}
 
 	public void ClickonSocietyinvoicing() {
-		commmethods.clickbyxpath(SocietyInvoice);
+		commmethods.clickbyxpat(SocietyInvoice);
 	}
 
 }

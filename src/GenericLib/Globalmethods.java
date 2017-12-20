@@ -2,7 +2,8 @@ package GenericLib;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
+
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
@@ -12,9 +13,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.ITestResult;
+import org.testng.log4testng.Logger;
 
 public class Globalmethods {
 
@@ -39,44 +40,94 @@ public class Globalmethods {
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
 	}
-
-	public void AcceptAlert() {
-		Alert alert = driver.switchTo().alert();
-		String PopupText = alert.getText();
-		System.out.println("Popup came as : " + PopupText);
+	
+	public void AlertHandling(){
+		Alert alert=driver.switchTo().alert();
+		String message=alert.getText();
+		System.out.println("Pop up is"+ message);
 		alert.accept();
 	}
-//
-//	public void setdata(WebElement wb, String data) {
-//
-//		wb.clear();
-//
-//		wb.sendKeys(data);
-//	}
-
-	public void setdataByCss(String wb, String data) {
-
-	WebElement elemnt=driver.findElement(By.cssSelector(wb));
-	elemnt.clear();
-	elemnt.click();
-	elemnt.sendKeys(data);
-	}
 	
-	// public boolean IsDiplayed(WebElement element) {
-	// try {
-	// element.isDisplayed();
-	//
-	// } catch (NoSuchElementException e) {
-	// e.printStackTrace();
-	// }
-	// return false;
-	// }
+//
+//	public void AcceptAlert() {
+//		Alert alert = driver.switchTo().alert();
+//		String PopupText = alert.getText();
+//		System.out.println("Popup came as : " + PopupText);
+//		alert.accept();
+//	}
+	public void DropeDownHandling(WebElement element,int index){
+		Select select=new Select(element);
+		select.selectByIndex(index);
+	}
 
-	// public void click(WebElement element) {
-	// if (IsDiplayed(element)) {
-	// element.click();
+	public void SetData(WebElement wb, String data) {
+	//	wb.click();
+		
+		wb.clear();
+		wb.sendKeys(data);
+	}
+//Public void clear(WebElement wb){
+//	wb.clear();
+//}
+	public boolean IsDiplayed(WebElement wb) {
+		try {
+			wb.isDisplayed();
+
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	public void findby(WebElement wb) {
+		wb.click();
+
+	}
+
+	// public void Checkboxclick(String element) {
+	// if (IsSlected(element)) {
+	// driver.findElement(By.id(element)).click();
 	// }
 	// }
+	public void checkboxSelect(WebElement openingBal, String choose) throws InterruptedException {
+		// WebElement checkbox = driver.findElement(By.cssSelector(openingBal));
+		String selectcheckbox = "yes";
+		if (selectcheckbox.equals(choose)) {
+			if (openingBal.isSelected() == true) {
+				System.out.println("Tax is Selected");
+
+			} else {
+
+				openingBal.click();
+				Thread.sleep(1000);
+
+			}
+		} else {
+			if (openingBal.isSelected() == true) {
+
+				openingBal.click();
+				Thread.sleep(1000);
+			} else {
+				System.out.println("Tax not selected");
+			}
+		}
+	}
+
+	public boolean IsSlected(WebElement wb) {
+		try {
+
+			wb.isSelected();
+
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	public void click(WebElement element) {
+
+		element.click();
+	}
 
 	/*
 	 * public void sendkeysByid(WebElement webElement, String data) {
@@ -87,21 +138,26 @@ public class Globalmethods {
 	// driver.findElement(By.id(id)).sendKeys(value);
 	// }
 
-	public void click(WebElement chech_Bttn) {
-		chech_Bttn.click();
-	}
+	// public void click(WebElement chech_Bttn) {
+	// chech_Bttn.click();
+	// }
 
 	public void sendkeys(WebElement wb, String data) {
 		wb.sendKeys(data);
 	}
 
-	public void sendkeysByCss(String wb, String data) {
-		driver.findElement(By.cssSelector(wb)).sendKeys(data);
-	}
+	// public void sendkeysByCss(String wb, String data) {
+	// driver.findElement(By.cssSelector(wb)).sendKeys(data);
+	// }
 
-	public void clickbyxpath(String data) {
+	// public void clickbyxpath(WebElement application) {
+	//
+	// driver.findElement(By.xpath(application)).click();
+	// }
 
-		driver.findElement(By.xpath(data)).click();
+	public void clickbyxpat(String application) {
+
+		driver.findElement(By.xpath(application)).click();
 	}
 
 	public void clickbyCSS(String data) {
@@ -163,9 +219,9 @@ public class Globalmethods {
 	}
 
 	public void ListOfElements(String wb, String PerticularElement) {
-		List<WebElement> ListElements=driver.findElements(By.xpath(wb));
+		List<WebElement> ListElements = driver.findElements(By.xpath(wb));
 		for (WebElement element : ListElements) {
-			String Element=driver.findElement(By.xpath(PerticularElement)).getText();
+			String Element = driver.findElement(By.xpath(PerticularElement)).getText();
 			if (element.equals(Element)) {
 				element.click();
 			}

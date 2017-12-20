@@ -39,11 +39,12 @@ public class loginobjects extends Baseconfig{
 
 	 
 	 
-	 public void ValidLogin(){
+	 public void ValidLogin() throws InterruptedException{
 		 //username_Edit.sendKeys(Constants.Admin);
 		 //Password_Edit.sendKeys(Constants.password);
 		 commmethods.sendkeys(username_Edit, Constants.Admin);
 		 commmethods.sendkeys(Password_Edit, Constants.password);
+		 commmethods.sleep();
 		// Baseconfig.webdriverwait.waitforpagetoload();
 		 commmethods.click(Chech_Bttn);
 		 commmethods.click(Login_Bttn);
