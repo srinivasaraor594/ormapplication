@@ -28,6 +28,8 @@ public class HomePageObjects extends Baseconfig {
 
 	@FindBy(className = "category-box border-1 wow fadeInUpQuick animated")
 	private WebElement applicationbttn;
+	
+	
 
 	// @FindBy(xpath = "//a[@class='btn btn-warning main-menu']")
 	// private WebElement application;
@@ -43,5 +45,5 @@ public class HomePageObjects extends Baseconfig {
 	public void ClickonSocietyinvoicing() {
 		commmethods.clickbyxpat(SocietyInvoice);
 	}
-
+	
 }

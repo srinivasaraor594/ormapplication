@@ -4,6 +4,7 @@ package GenericLib;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 
+import objectrep.FinanceVouchersObjects;
 import objectrep.HomePageObjects;
 import objectrep.InvoiceObjects;
 import objectrep.loginobjects;
@@ -12,7 +13,7 @@ import testcases.Happyflow;
 public class Baseconfig {
 //	private WebDriver driver;
 	//protected static loginobjects logobjects=PageFactory.initElements(Globalmethods.driver,loginobjects.class);
-//	protected static WebElements webElements = new WebElements();
+	protected static FinanceVouchersObjects financeVouchersObjects = new FinanceVouchersObjects();
 	protected static Globalmethods commmethods = new Globalmethods();
 	protected static Webdriverwaitstatemts webdriverwait = new Webdriverwaitstatemts();
 	protected static SampleLisner scrreenshoot=new SampleLisner();
@@ -34,7 +35,7 @@ public class Baseconfig {
 		PageFactory.initElements(Globalmethods.driver,HomePageObjects.class);
 		PageFactory.initElements(Globalmethods.driver,InvoiceObjects.class);
 		PageFactory.initElements(Globalmethods.driver,Happyflow.class);
-		
+		PageFactory.initElements(Globalmethods.driver, FinanceVouchersObjects.class);
 		Thread.sleep(2000);
 
 		// commmethods.navigatemethod(Constants.url);

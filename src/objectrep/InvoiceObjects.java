@@ -2,7 +2,6 @@ package objectrep;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import GenericLib.Baseconfig;
 
 public class InvoiceObjects extends Baseconfig {
@@ -10,9 +9,12 @@ public class InvoiceObjects extends Baseconfig {
 	private static WebElement FixedInvoiceGeneration;
 	// private String FixedInvoiceGeneration="#Fixed";
 
-	@FindBy(xpath = ".//*[@id='auto_BlockID']")
+	@FindBy(id = "auto_BlockID")
 	private static WebElement SelectionOfBlock;
 	// private String SelectionOfBlock ="#auto_BlockID";
+
+	@FindBy(xpath = "//*[@id='ui-id-38']")
+	private static WebElement BlockIs;
 
 	@FindBy(css = "#auto_ApartmentID")
 	private static WebElement SelectionOfAppartment;
@@ -58,15 +60,18 @@ public class InvoiceObjects extends Baseconfig {
 	private static WebElement Generate;
 	// private String Generate="Gen";
 
-	// private string BasicAmountForOwner= "#BA1";
-	// private string BasicAmountForOwner= "#BA1";
-	// @FindBy(css="#CH1")
-	// private WebElement checkboxoftax;
+	@FindBy(id = "Generate")
+	private static WebElement window;
+
+	@FindBy(id = "GenInv")
+	private static WebElement FinalGeneration;
+	
+	
 
 	public void FilingFixedInvoiceForm() throws InterruptedException {
 		commmethods.click(FixedInvoiceGeneration);
 		commmethods.sleep();
-		commmethods.SetData(SelectionOfBlock, " Block 3");
+		commmethods.SetData(SelectionOfBlock, "Block 3");
 		commmethods.sleep();
 		commmethods.SetData(SelectionOfAppartment, "1");
 		commmethods.SetData(BasicAmountForOwnerPerMonth, "12");
@@ -79,7 +84,27 @@ public class InvoiceObjects extends Baseconfig {
 		commmethods.sendkeys(Narration1, ".");
 		commmethods.sendkeys(Narration2, ".");
 		commmethods.click(Generate);
-		commmethods.AlertHandling();
+		commmethods.sleep();
+		// commmethods.AlertHandling();
 	}
+
+	public void clicking() {
+		commmethods.click(window);
+	}
+
+	public void clickingonGeneration() throws InterruptedException {
+		commmethods.click(FinalGeneration);
+		commmethods.sleep();
+	}
+
+	public String gettingnumberofinvoice() throws InterruptedException {
+		commmethods.sleep();
+		String msg = commmethods.AlertHandling();
+		String message=msg.split(" ")[1];
+		System.out.println(message);
+		return message;
+	}
+	
+
 
 }

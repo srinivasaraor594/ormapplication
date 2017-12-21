@@ -23,15 +23,10 @@ public class SampleLisner implements ITestListener{
 	
 	@Override
 	
-	public void onFinish(ITestContext arg0) {
-		// TODO Auto-generated method stub
-		File scrFile = ((TakesScreenshot) Globalmethods.driver).getScreenshotAs(OutputType.FILE);
-		try {
-			FileUtils.copyFile(scrFile, new File("C:\\Users\\ITSMYACCOUNT\\workspace\\ormapplication\\ScreenShorts\\"+ "TestPass" + ".png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void onFinish(ITestContext s) {
+	
+		
+		
 	}
 
 	@Override
@@ -51,7 +46,7 @@ public class SampleLisner implements ITestListener{
 		String TestName=e.getMethod().getMethodName();
 		File src=((TakesScreenshot)Globalmethods.driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyDirectory(src, new File("C:\\Users\\ITSMYACCOUNT\\workspace\\ormapplication\\ScreenShorts\\"+TestName+".png"));
+			FileUtils.copyFile(src, new File("C:\\Users\\ITSMYACCOUNT\\workspace\\ormapplication\\ScreenShorts\\"+TestName+".png"));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

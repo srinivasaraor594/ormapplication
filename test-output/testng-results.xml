@@ -2,46 +2,24 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31134" started-at="2017-12-20T12:40:52Z" finished-at="2017-12-20T12:41:24Z">
+  <suite name="Default suite" duration-ms="32300" started-at="2017-12-21T12:10:37Z" finished-at="2017-12-21T12:11:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31134" started-at="2017-12-20T12:40:52Z" finished-at="2017-12-20T12:41:24Z">
+    <test name="Default test" duration-ms="32300" started-at="2017-12-21T12:10:37Z" finished-at="2017-12-21T12:11:10Z">
       <class name="testcases.Happyflow">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.Happyflow@59fa1d9b]" name="initialize" is-config="true" duration-ms="12218" started-at="2017-12-20T18:10:52Z" finished-at="2017-12-20T18:11:05Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.Happyflow@523884b2]" name="initialize" is-config="true" duration-ms="11509" started-at="2017-12-21T17:40:37Z" finished-at="2017-12-21T17:40:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="Regression()[pri:0, instance:testcases.Happyflow@59fa1d9b]" name="Regression" duration-ms="18884" started-at="2017-12-20T18:11:05Z" finished-at="2017-12-20T18:11:23Z">
-          <exception class="org.openqa.selenium.NoAlertPresentException">
+        <test-method status="FAIL" signature="Regression()[pri:0, instance:testcases.Happyflow@523884b2]" name="Regression" duration-ms="20565" started-at="2017-12-21T17:40:49Z" finished-at="2017-12-21T17:41:10Z">
+          <exception class="java.lang.ArrayIndexOutOfBoundsException">
             <message>
-              <![CDATA[No alert is present (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.25 seconds
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
-System info: host: 'ITSMYACCOUNT-PC', ip: '192.168.1.103', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3b439eef-5811-4638-a6be-5f32e665f533]]>
+              <![CDATA[1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoAlertPresentException: No alert is present (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.25 seconds
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
-System info: host: 'ITSMYACCOUNT-PC', ip: '192.168.1.103', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3b439eef-5811-4638-a6be-5f32e665f533
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1049)
-	at GenericLib.Globalmethods.AlertHandling(Globalmethods.java:45)
-	at objectrep.InvoiceObjects.FilingFixedInvoiceForm(InvoiceObjects.java:82)
-	at testcases.Happyflow.Regression(Happyflow.java:14)
+              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: 1
+	at objectrep.InvoiceObjects.gettingnumberofinvoice(InvoiceObjects.java:106)
+	at testcases.Happyflow.Regression(Happyflow.java:20)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -68,7 +46,7 @@ Session ID: 3b439eef-5811-4638-a6be-5f32e665f533
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
+          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Regression -->

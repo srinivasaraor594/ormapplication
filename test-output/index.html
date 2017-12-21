@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\ITSMYACCOUNT\AppData\Local\Temp\testng-eclipse-1136107876\testng-customsuite.xml</span>
+                    <span>C:\Users\ITSMYACCOUNT\AppData\Local\Temp\testng-eclipse-1285835390\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -127,25 +127,9 @@
                   <a name="Regression">
                   </a> <!-- Regression -->
                   <span class="method-name">Regression</span>
-                  <div class="stack-trace">org.openqa.selenium.NoAlertPresentException: No alert is present (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.25 seconds
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:32:46&apos;
-System info: host: &apos;ITSMYACCOUNT-PC&apos;, ip: &apos;192.168.1.103&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_101&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3b439eef-5811-4638-a6be-5f32e665f533
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1049)
-	at GenericLib.Globalmethods.AlertHandling(Globalmethods.java:45)
-	at objectrep.InvoiceObjects.FilingFixedInvoiceForm(InvoiceObjects.java:82)
-	at testcases.Happyflow.Regression(Happyflow.java:14)
+                  <div class="stack-trace">java.lang.ArrayIndexOutOfBoundsException: 1
+	at objectrep.InvoiceObjects.gettingnumberofinvoice(InvoiceObjects.java:106)
+	at testcases.Happyflow.Regression(Happyflow.java:20)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -179,7 +163,7 @@ Session ID: 3b439eef-5811-4638-a6be-5f32e665f533
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ITSMYACCOUNT\AppData\Local\Temp\testng-eclipse-1136107876\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ITSMYACCOUNT\AppData\Local\Temp\testng-eclipse-1285835390\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -232,12 +216,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Regression')
 data.setCell(0, 2, 'testcases.Happyflow')
-data.setCell(0, 3, 18884);
+data.setCell(0, 3, 20565);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -272,7 +256,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Regression</span>
-                <span class="method-start">12225 ms</span>
+                <span class="method-start">11515 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

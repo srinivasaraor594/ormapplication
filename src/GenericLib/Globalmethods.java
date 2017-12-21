@@ -1,21 +1,24 @@
 package GenericLib;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
-
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.ITestResult;
-import org.testng.log4testng.Logger;
 
 public class Globalmethods {
 
@@ -41,11 +44,12 @@ public class Globalmethods {
 		dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
 	}
 	
-	public void AlertHandling(){
+	public String AlertHandling(){
 		Alert alert=driver.switchTo().alert();
 		String message=alert.getText();
 		System.out.println("Pop up is"+ message);
 		alert.accept();
+		return message;
 	}
 	
 //
@@ -59,16 +63,37 @@ public class Globalmethods {
 		Select select=new Select(element);
 		select.selectByIndex(index);
 	}
+	public void refresh(){
+		driver.navigate().refresh();
+	}
+	
+	
+	public void ActionsClass(WebElement Element1, WebElement Element2) throws InterruptedException{
+		Actions actions=new  Actions(driver);
+		
+		actions.doubleClick(Element1).perform();
+		sleep();
+		click(Element2);
+//		actions.moveToElement(Element2).perform();
+//		actions.click().perform();
+	}
+	
+//	public void SetDataforblock(WebElement selectionOfBlock, String string) {
+//		selectionOfBlock.click();
+//		
+//		selectionOfBlock.sendKeys(string);
+//		
+//	}
 
 	public void SetData(WebElement wb, String data) {
-	//	wb.click();
-		
+		wb.click();
 		wb.clear();
 		wb.sendKeys(data);
+		
 	}
-//Public void clear(WebElement wb){
-//	wb.clear();
-//}
+public void clear(WebElement wb){
+	wb.clear();
+}
 	public boolean IsDiplayed(WebElement wb) {
 		try {
 			wb.isDisplayed();
@@ -229,6 +254,17 @@ public class Globalmethods {
 
 	}
 
+	public void ScrrenshotMethod() throws IOException{
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("//"+".png"));
+		
+	}
+
+	
+
+	
+	
+	
 	// public void listofelemnts(List<WebElement>elements, String data){
 	// for(WebElement element: elements){
 	// if(element.getAttribute("title").equalsIgnoreCase(data));
