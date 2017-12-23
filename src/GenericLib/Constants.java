@@ -13,4 +13,5 @@ public interface Constants {
 	
 	String password="DEMO_10";
 	String Admin="DEMO_10";
+	String excelconfig="./ormapplication/ExcellsForProject/Testing Excell.xlsx";
 }

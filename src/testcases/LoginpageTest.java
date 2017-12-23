@@ -17,8 +17,11 @@ public class LoginpageTest extends Baseconfig {
 	 @Test()
 	 public void gettingcredentials() throws Exception 
 	 { 
+		 
+//		 commmethods.sendkeys(loginobjects.getUsername_Edit()," data");
+//		 commmethods.sendkeys(loginobjects.getPassword_Edit(), "data");
 
-		 loginobjects.ValidLogin();
+		//loginobjects.ValidLogin();
 		
 		
 		

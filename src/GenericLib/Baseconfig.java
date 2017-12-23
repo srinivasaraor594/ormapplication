@@ -17,7 +17,7 @@ public class Baseconfig {
 	protected static Globalmethods commmethods = new Globalmethods();
 	protected static Webdriverwaitstatemts webdriverwait = new Webdriverwaitstatemts();
 	protected static SampleLisner scrreenshoot=new SampleLisner();
-	protected static Excellconfig Excell=new Excellconfig();
+	//protected static Excellconfig Excell=new Excellconfig();
 	protected static loginobjects loginobjects=new loginobjects();
 	protected static InvoiceObjects invoiceObjects=new InvoiceObjects();
 	protected static HomePageObjects homeobjects=new HomePageObjects();

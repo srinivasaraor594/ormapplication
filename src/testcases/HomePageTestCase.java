@@ -18,9 +18,9 @@ public class HomePageTestCase extends Baseconfig {
 	@Test
 	public void Application() throws InterruptedException {
 		// commmethods.navigatemethod(Constants.url);
-		loginobjects.ValidLogin();
-		homeobjects.clickOnApplication();
-		homeobjects.ClickonSocietyinvoicing();
+//		commmethods.click(element);
+//		homeobjects.clickOnApplication();
+//		homeobjects.ClickonSocietyinvoicing();
 
 	}
 

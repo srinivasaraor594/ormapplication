@@ -23,12 +23,35 @@ public class HomePageObjects extends Baseconfig {
 	@FindBy(className = "category-box border-1 wow fadeInUpQuick animated")
 	private WebElement MySocietyList;
 
-	private String application = "//a[@class='btn btn-warning main-menu']";
-	private String SocietyInvoice = "//img[@src='/content/img/504.png']";
+	//private String application = "//a[@class='btn btn-warning main-menu']";
+	//private String SocietyInvoice = "//img[@src='/content/img/504.png']";
 
-	@FindBy(className = "category-box border-1 wow fadeInUpQuick animated")
-	private WebElement applicationbttn;
+	@FindBy(xpath = "//a[@class='btn btn-warning main-menu']")
+	private static   WebElement Application;
+//	
+//	@FindBy(className = "category-box border-1 wow fadeInUpQuick animated")
+//	private WebElement applicationbttn;
 	
+	@FindBy(xpath = "//img[@src='/content/img/504.png']")
+	private static WebElement SocietyInvoice;
+
+	public static   WebElement getApplication() {
+		return Application;
+	}
+
+
+	public WebElement getMySocietyList() {
+		return MySocietyList;
+	}
+
+	
+//	public WebElement getApplicationbttn() {
+//		return applicationbttn;
+//	}
+
+	public static WebElement getSocietyInvoice() {
+		return SocietyInvoice;
+	}
 	
 
 	// @FindBy(xpath = "//a[@class='btn btn-warning main-menu']")
@@ -37,13 +60,13 @@ public class HomePageObjects extends Baseconfig {
 	// @FindBy(xpath = "//a[@class='btn btn-warning main-menu']")
 	// private WebElement SocietyInvoice;
 
-	public void clickOnApplication() throws InterruptedException {
-		commmethods.sleep();
-		commmethods.clickbyxpat(application);
-	}
-
-	public void ClickonSocietyinvoicing() {
-		commmethods.clickbyxpat(SocietyInvoice);
-	}
+//	public void clickOnApplication() throws InterruptedException {
+//		commmethods.sleep();
+//		commmethods.click(application);
+//	}
+//
+//	public void ClickonSocietyinvoicing() {
+//		commmethods.click(SocietyInvoice);
+//	}
 	
 }

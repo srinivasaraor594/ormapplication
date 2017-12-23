@@ -21,30 +21,50 @@ public class loginobjects extends Baseconfig {
 	 */
 
 	@FindBy(id = "UserName")
-	private static WebElement username_Edit;
+	private  WebElement username_Edit;
 
 	@FindBy(id = "Password")
-	private static WebElement Password_Edit;
-
+	private  WebElement Password_Edit;
+	
 	@FindBy(id = "TnC")
-	private static WebElement Chech_Bttn;
+	private WebElement Chech_Bttn;
 
 	@FindBy(id = "logsave")
-	private static WebElement Login_Bttn;
+	private WebElement Login_Bttn;
 
 	@FindBy(xpath = "//span[@class='zF']")
-	private WebElement MailSearch;
+	private  WebElement MailSearch;
+//
+//	public void ValidLogin() throws InterruptedException {
+//		// username_Edit.sendKeys(Constants.Admin);
+//		// Password_Edit.sendKeys(Constants.password);
+//		commmethods.sendkeys(username_Edit, Constants.Admin);
+//		commmethods.sendkeys(Password_Edit, Constants.password);
+//		commmethods.sleep();
+//		// Baseconfig.webdriverwait.waitforpagetoload();
+//		commmethods.click(Chech_Bttn);
+//		commmethods.click(Login_Bttn);
+//
+//	}
 
-	public void ValidLogin() throws InterruptedException {
-		// username_Edit.sendKeys(Constants.Admin);
-		// Password_Edit.sendKeys(Constants.password);
-		commmethods.sendkeys(username_Edit, Constants.Admin);
-		commmethods.sendkeys(Password_Edit, Constants.password);
-		commmethods.sleep();
-		// Baseconfig.webdriverwait.waitforpagetoload();
-		commmethods.click(Chech_Bttn);
-		commmethods.click(Login_Bttn);
+	public WebElement getUsername_Edit() {
+		return username_Edit;
+	}
 
+	public  WebElement getPassword_Edit() {
+		return Password_Edit;
+	}
+
+	public WebElement getChech_Bttn() {
+		return Chech_Bttn;
+	}
+
+	public  WebElement getLogin_Bttn() {
+		return Login_Bttn;
+	}
+
+	public  WebElement getMailSearch() {
+		return MailSearch;
 	}
 
 	// @DataProvider(name = "OTHFacilitySimulationWithAdminLogin")
