@@ -15,6 +15,7 @@ public class Happyflow extends Baseconfig {
 	public void Regression(String Block, String Appatment, String OwnerAmount, String Squrefeet, String Tenantamount,
 			String TenantSqurefeet, String Ownertaxcheck, String TenantTaxCheck, String OpeningBal, String Narration,
 			String Narrationn) throws InterruptedException {
+		commmethods.sleep();
 		commmethods.sendkeys(loginobjects.getUsername_Edit(), "DEMO_12");
 		commmethods.sendkeys(loginobjects.getUsername_Edit(), "DEMO_12");
 		commmethods.click(loginobjects.getChech_Bttn());

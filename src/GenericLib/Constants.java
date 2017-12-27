@@ -12,6 +12,8 @@ public interface Constants {
 	String gmailurl="https://accounts.google.com";
 	
 	String password="DEMO_10";
+	
 	String Admin="DEMO_10";
-	String excelconfig="./ormapplication/ExcellsForProject/Testing Excell.xlsx";
+	
+	String excelconfig="C:\\Users\\ITSMYACCOUNT\\Desktop\\Testing Excell.xlsx";
 }

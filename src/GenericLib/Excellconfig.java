@@ -3,10 +3,14 @@ package GenericLib;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import jxl.format.CellFormat;
 
 public class Excellconfig {
 
@@ -15,46 +19,62 @@ public class Excellconfig {
 	XSSFRow row;
 	XSSFCell cell;
 
-	public Excellconfig(String filepath) throws IOException {
+	public Excellconfig() throws IOException {
 		// TODO Auto-generated constructor stub
-		FileInputStream fis = new FileInputStream(filepath);
+		FileInputStream fis = new FileInputStream(Constants.excelconfig);
 		workbook = new XSSFWorkbook(fis);
 	}
-	 public int getColumnCount(int sheeIndex)
-	   {
-	       sheet = workbook.getSheetAt(sheeIndex);
-	       row = sheet.getRow(0);
-	       int colCount = row.getLastCellNum();
+
+	public int getColumnCount(int sheeIndex) {
+		sheet = workbook.getSheetAt(sheeIndex);
+		row = sheet.getRow(0);
+		int colCount = row.getLastCellNum();
+
 		return colCount;
-	       
-	   }
-	
+
+	}
+
 	public int getRowcount(int SheetIndex) {
 		int rowCount = workbook.getSheetAt(SheetIndex).getLastRowNum();
-		rowCount=rowCount+1;
+		rowCount = rowCount + 1;
 		return rowCount;
 	}
-//	public int getcellcount(int sheetIndex){
-//		int cellcount=workbook.getSheetAt(sheetIndex).getLastRowNum
-//	}
-//	
-	
-	public String GetCellData(int sheetnum,int rownum,int cellnum){
-		sheet=workbook.getSheetAt(sheetnum);
-		String celldata=sheet.getRow(rownum).getCell(cellnum).getStringCellValue();
+	// public int getcellcount(int sheetIndex){
+	// int cellcount=workbook.getSheetAt(sheetIndex).getLastRowNum
+	// }
+	//
+
+	public String GetCellData(int sheetnum, int rownum, int cellnum) {
+		DataFormatter df = new DataFormatter();
+		sheet = workbook.getSheetAt(sheetnum);
+
+		Cell cell = sheet.getRow(rownum).getCell(cellnum);
+		
+		String celldata=df.formatCellValue(cell); 
+		System.out.println(celldata);
 		return celldata;
 	}
 }
-//	int colCount = sheet.getRow(0).getLastCellNum();System.out.println(colCount);
-//	Object[][] RegressionData = new Object[rowCount][colCount];for(
-//	int rCnt = 1;rCnt<rowCount;rCnt++)
-//	{
-//				for (int cCnt = 0; cCnt < colCount; cCnt++) {
-//					RegressionData[rCnt - 1][cCnt] =workbook.g
-//					System.out.println(RegressionData[rCnt - 1][cCnt]);
-//				}
-//			}return RegressionData;
-//}}
+
+//Workbook wb = WorkbookFactory.create(new File("myfile.xls"));
+//DataFormatter df = new DataFormatter();
+//
+//Sheet s = wb.getSheetAt(0);
+//Row r1 = s.getRow(0);
+//Cell cA1 = r1.getCell(0);
+//
+//String asItLooksInExcel = df.formatCellValue(cA1);
+
+// int colCount = sheet.getRow(0).getLastCellNum();System.out.println(colCount);
+// Object[][] RegressionData = new Object[rowCount][colCount];for(
+// int rCnt = 1;rCnt<rowCount;rCnt++)
+// {
+// for (int cCnt = 0; cCnt < colCount; cCnt++) {
+// RegressionData[rCnt - 1][cCnt] =workbook.g
+// System.out.println(RegressionData[rCnt - 1][cCnt]);
+// }
+// }return RegressionData;
+// }}
 
 // public Object[][] testData(String FilePath, String sheetName) throws
 // Exception {
