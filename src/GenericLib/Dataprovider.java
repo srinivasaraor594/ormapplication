@@ -15,12 +15,12 @@ public class Dataprovider {
 	 Excellconfig config = new Excellconfig();
 	 int rows = config.getRowcount(0);
 	 System.out.println(rows);
-	 int column = config.getColumnCount(0);
+	 int column = config.getColumnCount(0,7)+1;
 	 System.out.println(column);
-	 Object[][] data = new Object[rows][column];
-	 for (int i = 1; i < rows; i++) {
-	 for (int j = 1; j < column; j++) {
-	 data[i][j] = config.GetCellData(0, i, j);
+	 Object[][] data = new Object[rows-1][column];
+	 for (int i = 7; i <rows; i++) {
+	 for (int j = 0; j <column; j++) {
+	 data[i-1][j] = config.GetCellData(0, i, j);
 	 }   }
 	 return data;
 	 }

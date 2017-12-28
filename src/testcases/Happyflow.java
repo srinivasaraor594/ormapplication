@@ -12,12 +12,12 @@ import objectrep.HomePageObjects;
 public class Happyflow extends Baseconfig {
 
 	@Test(dataProvider = "Regression", dataProviderClass = Dataprovider.class)
-	public void Regression(String Block, String Appatment, String OwnerAmount, String Squrefeet, String Tenantamount,
+	public void Regression(String Username,String Password, String Block, String Appatment, String OwnerAmount, String Squrefeet, String Tenantamount,
 			String TenantSqurefeet, String Ownertaxcheck, String TenantTaxCheck, String OpeningBal, String Narration,
 			String Narrationn) throws InterruptedException {
 		commmethods.sleep();
-		commmethods.sendkeys(loginobjects.getUsername_Edit(), "DEMO_12");
-		commmethods.sendkeys(loginobjects.getUsername_Edit(), "DEMO_12");
+		commmethods.sendkeys(loginobjects.getUsername_Edit(),Username );
+		commmethods.sendkeys(loginobjects.getPassword_Edit(), Password);
 		commmethods.click(loginobjects.getChech_Bttn());
 		commmethods.click(loginobjects.getLogin_Bttn());
 		commmethods.click(HomePageObjects.getApplication());
@@ -38,7 +38,6 @@ public class Happyflow extends Baseconfig {
 		commmethods.sendkeys(invoiceObjects.getNarration2(),Narrationn );
 		commmethods.click(invoiceObjects.getGenerate());
 		commmethods.sleep();
-
 		// invoiceObjects.FilingFixedInvoiceForm();
 		invoiceObjects.clicking();
 		invoiceObjects.clickingonGeneration();

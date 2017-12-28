@@ -21,7 +21,7 @@ public class loginobjects extends Baseconfig {
 	 */
 
 	@FindBy(id = "UserName")
-	private  WebElement username_Edit;
+	private static WebElement username_Edit;
 
 	@FindBy(id = "Password")
 	private  WebElement Password_Edit;
@@ -47,7 +47,7 @@ public class loginobjects extends Baseconfig {
 //
 //	}
 
-	public WebElement getUsername_Edit() {
+	public static WebElement getUsername_Edit() {
 		return username_Edit;
 	}
 

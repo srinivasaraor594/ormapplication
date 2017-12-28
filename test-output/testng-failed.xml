@@ -5,7 +5,7 @@
     <classes>
       <class name="testcases.Happyflow">
         <methods>
-          <include name="Regression"/>
+          <include name="Regression" invocation-numbers="0 1 2 3 4 5 6"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- testcases.Happyflow -->

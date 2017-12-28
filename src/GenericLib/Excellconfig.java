@@ -25,13 +25,11 @@ public class Excellconfig {
 		workbook = new XSSFWorkbook(fis);
 	}
 
-	public int getColumnCount(int sheeIndex) {
+	public int getColumnCount(int sheeIndex , int rownum) {
 		sheet = workbook.getSheetAt(sheeIndex);
-		row = sheet.getRow(0);
+		row = sheet.getRow(rownum);
 		int colCount = row.getLastCellNum();
-
 		return colCount;
-
 	}
 
 	public int getRowcount(int SheetIndex) {
@@ -47,9 +45,7 @@ public class Excellconfig {
 	public String GetCellData(int sheetnum, int rownum, int cellnum) {
 		DataFormatter df = new DataFormatter();
 		sheet = workbook.getSheetAt(sheetnum);
-
 		Cell cell = sheet.getRow(rownum).getCell(cellnum);
-		
 		String celldata=df.formatCellValue(cell); 
 		System.out.println(celldata);
 		return celldata;
