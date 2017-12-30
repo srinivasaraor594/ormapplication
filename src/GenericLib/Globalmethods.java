@@ -31,7 +31,6 @@ public class Globalmethods {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to(Constants.url);
-
 	}
 
 	public void quite() throws InterruptedException {
@@ -43,57 +42,52 @@ public class Globalmethods {
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
 	}
-	
-	public String AlertHandling(){
-		Alert alert=driver.switchTo().alert();
-		String message=alert.getText();
-		System.out.println("Pop up is"+ message);
+
+	public String AlertHandling() {
+		Alert alert = driver.switchTo().alert();
+		String message = alert.getText();
+		System.out.println("Pop up is" + message);
 		alert.accept();
 		return message;
 	}
-	
-//
-//	public void AcceptAlert() {
-//		Alert alert = driver.switchTo().alert();
-//		String PopupText = alert.getText();
-//		System.out.println("Popup came as : " + PopupText);
-//		alert.accept();
-//	}
-	public void DropeDownHandling(WebElement element,int index){
-		Select select=new Select(element);
+
+	public void DropeDownHandling(WebElement element, int index) {
+		Select select = new Select(element);
 		select.selectByIndex(index);
 	}
-	public void refresh(){
+
+	public void refresh() {
 		driver.navigate().refresh();
 	}
-	
-	
-	public void ActionsClass(WebElement Element1, WebElement Element2) throws InterruptedException{
-		Actions actions=new  Actions(driver);
-		
+
+	public void ActionsClass(WebElement Element1, WebElement Element2) throws InterruptedException {
+		Actions actions = new Actions(driver);
+
 		actions.doubleClick(Element1).perform();
 		sleep();
 		click(Element2);
-//		actions.moveToElement(Element2).perform();
-//		actions.click().perform();
+		// actions.moveToElement(Element2).perform();
+		// actions.click().perform();
 	}
-	
-//	public void SetDataforblock(WebElement selectionOfBlock, String string) {
-//		selectionOfBlock.click();
-//		
-//		selectionOfBlock.sendKeys(string);
-//		
-//	}
+
+	// public void SetDataforblock(WebElement selectionOfBlock, String string) {
+	// selectionOfBlock.click();
+	//
+	// selectionOfBlock.sendKeys(string);
+	//
+	// }
 
 	public void SetData(WebElement wb, String data) {
 		wb.click();
 		wb.clear();
 		wb.sendKeys(data);
-		
+
 	}
-public void clear(WebElement wb){
-	wb.clear();
-}
+
+	public void clear(WebElement wb) {
+		wb.clear();
+	}
+
 	public boolean IsDiplayed(WebElement wb) {
 		try {
 			wb.isDisplayed();
@@ -254,21 +248,18 @@ public void clear(WebElement wb){
 
 	}
 
-	public void ScrrenshotMethod() throws IOException{
-		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File("//"+".png"));
-		
+	public void ScrrenshotMethod() throws IOException {
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("//" + ".png"));
+
 	}
 
-	
-
-	
-	
-	
-	// public void listofelemnts(List<WebElement>elements, String data){
-	// for(WebElement element: elements){
-	// if(element.getAttribute("title").equalsIgnoreCase(data));
-	// element.click();
-	// break;
-	// }
+	public void listofelemnts(List<WebElement> elements, String data) {
+		for (WebElement element : elements) {
+			if (element.getAttribute("title").equalsIgnoreCase(data))
+				;
+			element.click();
+			break;
+		}
+	}
 }

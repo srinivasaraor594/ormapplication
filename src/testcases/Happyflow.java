@@ -45,5 +45,11 @@ public class Happyflow extends Baseconfig {
 		financeVouchersObjects.Clickonvoacher();
 
 	}
+	@Test
+	public void FacilityBooking(){
+		commmethods.click(homeobjects.getApplication());
+		commmethods.click(homeobjects.getMyFacility());
+		
+	}
 
 }

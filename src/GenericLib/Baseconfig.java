@@ -21,8 +21,8 @@ public class Baseconfig {
 	protected static loginobjects loginobjects=new loginobjects();
 	protected static InvoiceObjects invoiceObjects=new InvoiceObjects();
 	protected static HomePageObjects homeobjects=new HomePageObjects();
+	//protected static Myfacilities Facilitiesobj=new Myfacilities();
 	
-//	
 //	public WebDriver getDriver() {
 //		return driver;
 //	}
@@ -36,6 +36,7 @@ public class Baseconfig {
 		PageFactory.initElements(Globalmethods.driver,InvoiceObjects.class);
 		PageFactory.initElements(Globalmethods.driver,Happyflow.class);
 		PageFactory.initElements(Globalmethods.driver, FinanceVouchersObjects.class);
+		//PageFactory.initElements(Globalmethods.driver,MyFacilities.class);
 		Thread.sleep(2000);
 
 		// commmethods.navigatemethod(Constants.url);

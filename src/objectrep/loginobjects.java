@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import GenericLib.Baseconfig;
 import GenericLib.Constants;
 
-public class loginobjects extends Baseconfig {
+ public class loginobjects extends Baseconfig {
 
 	// private WebDriver driver;
 	//
@@ -21,11 +21,11 @@ public class loginobjects extends Baseconfig {
 	 */
 
 	@FindBy(id = "UserName")
-	private static WebElement username_Edit;
+	private WebElement username_Edit;
 
 	@FindBy(id = "Password")
-	private  WebElement Password_Edit;
-	
+	private WebElement Password_Edit;
+
 	@FindBy(id = "TnC")
 	private WebElement Chech_Bttn;
 
@@ -33,25 +33,25 @@ public class loginobjects extends Baseconfig {
 	private WebElement Login_Bttn;
 
 	@FindBy(xpath = "//span[@class='zF']")
-	private  WebElement MailSearch;
-//
-//	public void ValidLogin() throws InterruptedException {
-//		// username_Edit.sendKeys(Constants.Admin);
-//		// Password_Edit.sendKeys(Constants.password);
-//		commmethods.sendkeys(username_Edit, Constants.Admin);
-//		commmethods.sendkeys(Password_Edit, Constants.password);
-//		commmethods.sleep();
-//		// Baseconfig.webdriverwait.waitforpagetoload();
-//		commmethods.click(Chech_Bttn);
-//		commmethods.click(Login_Bttn);
-//
-//	}
+	private WebElement MailSearch;
+	//
+	// public void ValidLogin() throws InterruptedException {
+	// // username_Edit.sendKeys(Constants.Admin);
+	// // Password_Edit.sendKeys(Constants.password);
+	// commmethods.sendkeys(username_Edit, Constants.Admin);
+	// commmethods.sendkeys(Password_Edit, Constants.password);
+	// commmethods.sleep();
+	// // Baseconfig.webdriverwait.waitforpagetoload();
+	// commmethods.click(Chech_Bttn);
+	// commmethods.click(Login_Bttn);
+	//
+	// }
 
-	public static WebElement getUsername_Edit() {
+	public WebElement getUsername_Edit() {
 		return username_Edit;
 	}
 
-	public  WebElement getPassword_Edit() {
+	public WebElement getPassword_Edit() {
 		return Password_Edit;
 	}
 
@@ -59,11 +59,11 @@ public class loginobjects extends Baseconfig {
 		return Chech_Bttn;
 	}
 
-	public  WebElement getLogin_Bttn() {
+	public WebElement getLogin_Bttn() {
 		return Login_Bttn;
 	}
 
-	public  WebElement getMailSearch() {
+	public WebElement getMailSearch() {
 		return MailSearch;
 	}
 

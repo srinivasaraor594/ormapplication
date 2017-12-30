@@ -1,5 +1,6 @@
 package objectrep;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import GenericLib.Baseconfig;
@@ -37,6 +38,13 @@ public class HomePageObjects extends Baseconfig {
 
 	public static   WebElement getApplication() {
 		return Application;
+	}
+	
+	@FindBy(id="111")
+	public static WebElement MyFacility ;
+
+	public static WebElement getMyFacility() {
+		return MyFacility;
 	}
 
 
