@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeClass;
 import objectrep.FinanceVouchersObjects;
 import objectrep.HomePageObjects;
 import objectrep.InvoiceObjects;
+import objectrep.facilities;
 import objectrep.loginobjects;
 import testcases.Happyflow;
 
@@ -21,7 +22,7 @@ public class Baseconfig {
 	protected static loginobjects loginobjects=new loginobjects();
 	protected static InvoiceObjects invoiceObjects=new InvoiceObjects();
 	protected static HomePageObjects homeobjects=new HomePageObjects();
-	//protected static Myfacilities Facilitiesobj=new Myfacilities();
+	protected static facilities Facilitiesobj=new facilities();
 	
 //	public WebDriver getDriver() {
 //		return driver;
@@ -36,7 +37,7 @@ public class Baseconfig {
 		PageFactory.initElements(Globalmethods.driver,InvoiceObjects.class);
 		PageFactory.initElements(Globalmethods.driver,Happyflow.class);
 		PageFactory.initElements(Globalmethods.driver, FinanceVouchersObjects.class);
-		//PageFactory.initElements(Globalmethods.driver,MyFacilities.class);
+		PageFactory.initElements(Globalmethods.driver,facilities.class);
 		Thread.sleep(2000);
 
 		// commmethods.navigatemethod(Constants.url);

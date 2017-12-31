@@ -6,6 +6,7 @@ import GenericLib.Baseconfig;
 import GenericLib.Dataprovider;
 import GenericLib.Excellconfig;
 import objectrep.HomePageObjects;
+import objectrep.facilities;
 
 @Listeners(GenericLib.SampleLisner.class)
 
@@ -45,10 +46,11 @@ public class Happyflow extends Baseconfig {
 		financeVouchersObjects.Clickonvoacher();
 
 	}
-	@Test
+	@Test(priority=0)
 	public void FacilityBooking(){
-		commmethods.click(homeobjects.getApplication());
-		commmethods.click(homeobjects.getMyFacility());
+		commmethods.click(HomePageObjects.getApplication());
+		commmethods.click(HomePageObjects.getMyFacility());
+		facilities.FacilityNameList
 		
 	}
 
